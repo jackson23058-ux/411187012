@@ -1,0 +1,51 @@
+/* 基礎設定 */
+:root {
+    --primary-color: #007AFF;
+    --dark-color: #0A2540;
+    --text-main: #333333;
+    --text-light: #666666;
+    --bg-light: #F8F9FA;
+    --white: #FFFFFF;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; line-height: 1.6; color: var(--text-main); }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* 導航 */
+.navbar { height: 70px; background: var(--dark-color); display: flex; align-items: center; position: sticky; top: 0; z-index: 1000; transition: 0.3s; }
+.navbar .container { display: flex; justify-content: space-between; width: 100%; align-items: center; }
+.logo { color: white; text-decoration: none; font-weight: 700; font-size: 1.2rem; }
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin-left: 20px; }
+.nav-links a { color: white; text-decoration: none; opacity: 0.8; }
+
+/* Hero */
+.hero { padding: 120px 0; background: var(--dark-color); color: white; text-align: center; }
+.hero-name { font-size: 3rem; margin-bottom: 20px; }
+.highlight { color: var(--primary-color); }
+.hero-tagline { font-size: 1.2rem; margin-bottom: 40px; opacity: 0.9; }
+.btn { display: inline-block; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; margin: 0 10px; }
+.btn-primary { background: var(--primary-color); color: white; }
+.btn-secondary { border: 1px solid white; color: white; }
+
+/* 卡片設計 */
+.section { padding: 80px 0; }
+.bg-light { background: var(--bg-light); }
+.section-title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+
+.skills-grid, .courses-grid, .projects-grid { display: grid; gap: 20px; }
+.skills-grid { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.courses-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.projects-grid { grid-template-columns: 1fr; }
+
+.card, .skill-category { 
+    background: white; padding: 25px; border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-left: 5px solid var(--primary-color); 
+}
+
+.tag { background: #eef6ff; color: var(--primary-color); padding: 4px 10px; border-radius: 4px; font-size: 0.85rem; font-weight: 600; margin: 4px 2px; display: inline-block; }
+.status-badge { background: #28a745; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; float: right; }
+
+.footer { text-align: center; padding: 40px; background: var(--dark-color); color: white; opacity: 0.7; }
